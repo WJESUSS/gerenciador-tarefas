@@ -6,7 +6,7 @@ Desenvolvido com Java 21 + Spring Boot 3
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3+-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![H2](https://img.shields.io/badge/H2-Database-blue?style=for-the-badge&logo=h2&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
 
 <p align="center">
   <img src="https://i.imgur.com/0J0Y8.jpg" alt="Preview da aplicação" width="800"/>
@@ -78,40 +78,15 @@ Endpoints da API REST
 
 
 
+Método,Endpoint,Descrição
+GET,/api/tarefas,Lista todas as tarefas
+GET,/api/tarefas/{id},Busca tarefa por ID
+POST,/api/tarefas,Cria nova tarefa
+PUT,/api/tarefas/{id},Atualiza tarefa
+DELETE,/api/tarefas/{id},Remove tarefa
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-MétodoEndpointDescriçãoGET/api/tarefasLista todas as tarefasGET/api/tarefas/{id}Busca tarefa por IDPOST/api/tarefasCria nova tarefaPUT/api/tarefas/{id}Atualiza tarefaDELETE/api/tarefas/{id}Remove tarefa
-Exemplo de body (POST/PUT)
-JSON{
+{
   "titulo": "Estudar Spring Security",
   "descricao": "Implementar JWT e OAuth2",
   "prioridade": "ALTA",

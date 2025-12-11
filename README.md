@@ -1,188 +1,120 @@
-📝 Gerenciador de Tarefas
+Markdown# Gerenciador de Tarefas  
+**Sistema completo de tarefas com categorias, prioridades e status**  
+Desenvolvido com Java 21 + Spring Boot 3
 
-Sistema simples e eficiente para cadastrar, listar e gerenciar tarefas com categorias e níveis de prioridade. Desenvolvido com Java 21, Spring Boot e interface web estática.
+![Java](https://img.shields.io/badge/Java-21-%23ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3+-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![H2](https://img.shields.io/badge/H2-Database-blue?style=for-the-badge&logo=h2&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-<div align="center">
-🚀 Tecnologias
+<p align="center">
+  <img src="https://i.imgur.com/0J0Y8.jpg" alt="Preview da aplicação" width="800"/>
+</p>
 
+## Funcionalidades
 
+- Cadastro, edição, exclusão e listagem de tarefas  
+- Categorias personalizadas  
+- Prioridades: Alta · Média · Baixa  
+- Marcar tarefa como concluída  
+- Interface web moderna + API REST completa  
+- Banco H2 em memória (ideal para testes e estudos)  
+- Dados iniciais pré-cadastrados  
 
+## Tecnologias
 
+| Camada           | Tecnologia                        |
+|------------------|-----------------------------------|
+| Linguagem        | Java 21                           |
+| Framework        | Spring Boot 3 + Spring MVC        |
+| Persistência     | Spring Data JPA + Hibernate       |
+| Banco de dados   | H2 Database (em memória)          |
+| Build            | Maven                             |
+| Template Engine  | Thymeleaf (ou uso como API pura)  |
+| Front-end        | HTML5, CSS3, Vanilla JS           |
 
-
-
-
-
-
-</div>
-📌 Sobre o projeto
-
-O Gerenciador de Tarefas permite criar tarefas com título, descrição, prioridade, categoria e marcar como concluída.
-Ideal para estudos de Spring Boot, APIs REST, JPA, H2 e front-end básico com HTML/CSS/JS.
-
-## 📂 Estrutura do projeto
-
-
-
+## Estrutura do Projeto
 gerenciador-tarefas/
 ├── src/main/java/br/com/gerenciador/tarefas/
-│ ├── model/ # Entidades (Tarefa, Categoria, Prioridade)
-│ ├── controller/ # Controladores REST
-│ ├── repositorio/ # Interfaces JpaRepository
-│ ├── config/ # Carga de dados iniciais
-│ └── GerenciadorDeTarefasApplication.java
-│
+│   ├── model/          # Entidades JPA (Tarefa, Categoria)
+│   ├── controller/     # Controllers REST + MVC
+│   ├── repository/     # Repositórios JpaRepository
+│   ├── config/         # DadosIniciais.java (carga inicial)
+│   └── GerenciadorDeTarefasApplication.java
 ├── src/main/resources/
-│ ├── static/ # index.html, CSS e JS
-│ └── application.properties
-│
-├── pom.xml # Dependências Maven
+│   ├── static/         # index.html, estilo.css, script.js
+│   ├── templates/      # Páginas Thymeleaf (opcional)
+│   └── application.properties
+├── pom.xml
 └── README.md
+text## Como Executar
 
+### Pré-requisitos
+- Java 21
+- Maven (ou use o wrapper `./mvnw`)
 
----
+### Passo a passo
 
-## ⚙️ Configuração do ambiente
-
-### **Pré-requisitos**
-- Java 21 instalado
-- Maven instalado (ou usar o wrapper `./mvnw`)
-- IDE recomendada: IntelliJ IDEA / VSCode / Eclipse
-
----
-
-## ▶️ Como executar o projeto
-
-### **1. Clonar o repositório**
 ```bash
+# 1. Clone o repositório
 git clone https://github.com/SEU_USUARIO/gerenciador-tarefas.git
 
-2. Acessar a pasta
+#2. Entre na pasta
 cd gerenciador-tarefas
 
-3. Rodar o projeto
+#3. Execute a aplicação
 ./mvnw spring-boot:run
-
-
-ou
-
+# ou
 mvn spring-boot:run
-
-4. Acessar no navegador
-http://localhost:8080
-
-🧩 Modelagem
-Tarefa
-
-id
-
-título
-
-descrição
-
-prioridade (BAIXA, MEDIA, ALTA)
-
-categoria
-
-data de criação
-
-concluída (true/false)
-
-Categoria
-
-id
-
-nome
-
-Prioridade
-
-Enum com valores:
-
-ALTA
-
-MEDIA
-
-BAIXA
-
-📡 Endpoints Principais (API REST)
-Listar tarefas
-GET /api/tarefas
-
-Buscar tarefa por ID
-GET /api/tarefas/{id}
-
-Criar tarefa
-POST /api/tarefas
-Body (JSON):
-{
-  "titulo": "Estudar Java",
-  "descricao": "Revisar POO",
-  "prioridade": "ALTA",
-  "categoriaId": 1
-}
-
-Atualizar tarefa
-PUT /api/tarefas/{id}
-
-Excluir tarefa
-DELETE /api/tarefas/{id}
-
-💾 Banco de dados
-
-O projeto utiliza H2 Database em memória para facilitar testes.
-
-Acesse o console web:
-
+Acesse: http://localhost:8080
+Console H2 (apenas em dev)
 http://localhost:8080/h2-console
-
-
-Configurações padrão:
-
 JDBC URL: jdbc:h2:mem:testdb
-User: sa
-Password:
-
-🌱 Dados iniciais
-
-O arquivo DadosIniciais.java cria:
-
-Categorias base
-
-Tarefas de exemplo
-
-Prioridades
-
-🖥️ Interface Web
-
-A pasta src/main/resources/static/ possui:
-
-index.html
-
-estilo.css
-
-script.js
-
-Uma interface simples para visualizar e interagir com as tarefas.
-
-📜 Licença
-
-Este projeto é distribuído sob a licença MIT.
-Sinta-se livre para usar, modificar e distribuir.
-
-👤 Autor
-
-Washington Jesus
-Projeto desenvolvido para estudos e prática profissional em Java + Spring Boot.
+Usuário: sa
+Senha: (em branco)
+Endpoints da API REST
 
 
----
 
-Se quiser, posso:
 
-✅ **Gerar um README ainda mais profissional**  
-✅ **Adicionar badges (Java, Spring Boot, Status, Licença)**  
-✅ **Criar um diagrama UML do sistema**  
-✅ **Gerar documentação completa dos endpoints (Swagger/Redoc)**  
-✅ **Criar a logo do projeto**  
 
-Deseja que eu incremente esse README? ​:contentReference[oaicite:0]{index=0}​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MétodoEndpointDescriçãoGET/api/tarefasLista todas as tarefasGET/api/tarefas/{id}Busca tarefa por IDPOST/api/tarefasCria nova tarefaPUT/api/tarefas/{id}Atualiza tarefaDELETE/api/tarefas/{id}Remove tarefa
+Exemplo de body (POST/PUT)
+JSON{
+  "titulo": "Estudar Spring Security",
+  "descricao": "Implementar JWT e OAuth2",
+  "prioridade": "ALTA",
+  "categoriaId": 2,
+  "concluida": false
+}

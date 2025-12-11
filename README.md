@@ -1,20 +1,24 @@
-README.md – Gerenciador de Tarefas (Profissional)
-# 📝 Gerenciador de Tarefas  
-Sistema completo para cadastro, listagem e gerenciamento de tarefas com categorias e prioridades, desenvolvido em **Java 21 + Spring Boot**.
+📝 Gerenciador de Tarefas
 
----
+Sistema simples e eficiente para cadastrar, listar e gerenciar tarefas com categorias e níveis de prioridade. Desenvolvido com Java 21, Spring Boot e interface web estática.
 
-## 🚀 Tecnologias utilizadas
-- **Java 21**
-- **Spring Boot**
-- **Spring MVC**
-- **Spring Data JPA**
-- **H2 Database** (modo dev)
-- **Maven**
-- **HTML, CSS e JavaScript**
-- **Thymeleaf ou API REST (dependendo de uso futuro)**
+<div align="center">
+🚀 Tecnologias
 
----
+
+
+
+
+
+
+
+
+
+</div>
+📌 Sobre o projeto
+
+O Gerenciador de Tarefas permite criar tarefas com título, descrição, prioridade, categoria e marcar como concluída.
+Ideal para estudos de Spring Boot, APIs REST, JPA, H2 e front-end básico com HTML/CSS/JS.
 
 ## 📂 Estrutura do projeto
 

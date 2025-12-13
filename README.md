@@ -8,9 +8,6 @@ Desenvolvido com Java 21 + Spring Boot 3
 ![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 
 
-<p align="center">
-  <img src="https://i.imgur.com/0J0Y8.jpg" alt="Preview da aplicação" width="800"/>
-</p>
 
 ## Funcionalidades
 
